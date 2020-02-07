@@ -1,0 +1,4 @@
+name: Install/Env/EnsurePath
+debug: false
+files:
+  - name: src/ensurePath.ps1
