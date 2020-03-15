@@ -5,5 +5,5 @@ Manage Environment
 ## Examples
 
 ```sh
-nexss Install/Env --EnvPathAdd="C:\Thisismy\path"
+nexss System/Env/EnsurePath --EnvPathAdd="C:\Thisismy\path"
 ```
