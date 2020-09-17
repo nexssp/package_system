@@ -1,0 +1,5 @@
+name: Install/Env/EnsurePath
+info: Linux version
+debug: false
+files:
+  - name: ensurePath.sh
