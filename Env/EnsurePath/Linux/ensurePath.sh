@@ -1,7 +1,18 @@
 NexssStdin=`cat`
 # NexssStdout=$(echo "$NexssStdin"|jq ".outputBash = \"Hello from Bash! $BASH_VERSION\"")
 # NexssStdout=$(echo "$NexssStdin"|jq -r ".test = \"test\"")
-folderToAdd=$(echo "$NexssStdin"|jq -r ".nxsIn[0]")
+folderToAdd=$(echo "$NexssStdin"|jq -r ".nxsIn")
+# Check if is array.. 
+if [[ "$(declare -p folderToAdd)" =~ "declare -a" ]]; then
+    # We take only the first element
+    folderToAdd=$(echo "$NexssStdin"|jq -r ".nxsIn[0]")
+fi
+
+EnvPathAdd=$(echo "$NexssStdin"|jq -r '.EnvPathAdd')
+echo "NEXSS/ok:Adding path to your PATH: $EnvPathAdd">&2
+if [ -z $EnvPathAdd ]; then
+    folderToAdd=$EnvPathAdd
+fi
 
 if [ ! -d $folderToAdd ]
 then
