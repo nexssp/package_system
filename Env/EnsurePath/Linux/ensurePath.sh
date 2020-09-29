@@ -9,7 +9,6 @@ if [[ "$(declare -p folderToAdd)" =~ "declare -a" ]]; then
 fi
 
 EnvPathAdd=$(echo "$NexssStdin"|jq -r '.EnvPathAdd')
-echo "NEXSS/ok:Adding path to your PATH: $EnvPathAdd">&2
 if [ -z $EnvPathAdd ]; then
     folderToAdd=$EnvPathAdd
 fi
