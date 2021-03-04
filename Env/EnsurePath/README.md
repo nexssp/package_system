@@ -1,9 +1,9 @@
-# Install/Env - Nexss PROGRAMMER 2.0
+# System/Env/EnsurePath - Nexss PROGRAMMER 2.x
 
 Manage Environment
 
 ## Examples
 
 ```sh
-nexss System/Env/EnsurePath --EnvPathAdd="C:\Thisismy\path"
+nexss System/Env/EnsurePath "C:\Thisismy\path"
 ```
