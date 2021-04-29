@@ -1,0 +1,9 @@
+name: Kill
+debug: true
+files:
+  - name: src/kill.ps1
+input:
+  - name: "_kill:sure"
+    validate:
+      - type: required
+        message: You need to pass <Field> parameter for safety reason.
